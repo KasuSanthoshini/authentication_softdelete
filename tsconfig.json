@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ES6",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "sourceMap": true,
+    "sourceRoot": "/",
+    "allowUnreachableCode": false
+  },
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Recommended",
+  "include": ["**/*.ts", "server.js", "globals.d.ts"],
+  "exclude": ["node_modules/**/*", "**/*.spec.ts", "**/*.test.*"]
+}

@@ -1,0 +1,17 @@
+.github/**
+.git/**
+.husky
+.vscode/**
+.pnpm/**
+helm/**
+coverage/**
+src/**/*.ts
+*.ts
+test/**
+.eslintrc.js
+.gitignore
+.prettierrc.js
+.prettierignore
+tsconfig.json
+README.md
+jest.config.js

@@ -1,0 +1,17 @@
+extend schema @link(url: "https://specs.apollo.dev/federation/v2.1", import: ["@key", "@shareable", "@inaccessible"])
+
+directive @validation(
+  pattern: String
+  min: Int
+  max: Int
+  requiredMessage: String
+  typeOf: String
+  trim: Boolean
+  default: String
+) on INPUT_FIELD_DEFINITION | ARGUMENT_DEFINITION
+
+directive @column(overrideType: String) on FIELD_DEFINITION
+directive @id on FIELD_DEFINITION
+directive @embedded on FIELD_DEFINITION | OBJECT
+
+directive @external on FIELD_DEFINITION | OBJECT

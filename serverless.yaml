@@ -1,0 +1,25 @@
+
+
+service: template-lambda
+plugins:
+  - serverless-ignore
+  - serverless-dotenv-plugin
+
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  httpApi:
+    cors: true
+
+functions:
+  graphql:
+    handler: dist/handler.graphqlHandler
+    events:
+      - httpApi:
+          path: /
+          method: post
+      - httpApi:
+          path: /
+          method: get
+    timeout: 48

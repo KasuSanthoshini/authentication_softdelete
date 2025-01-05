@@ -1,0 +1,32 @@
+input UserInput {
+  email: String!
+  mobileNumber: String!
+  aadharNumber: String!
+  password: String!
+  userName: String!
+  displayName: String!
+}
+
+input signIninput {
+  credential: String!
+  password: String!
+}
+
+input forgotPasswordInput {
+  email: String!
+}
+
+input resetforgotPasswordInput {
+  otp: String!
+  email: String!
+  newPassword: String!
+}
+
+extend type Mutation {
+  signUp(input: UserInput!): String!
+  signIn(input: signIninput!): String!
+  forgotPassword(input: forgotPasswordInput!): String!
+  resetPassword(input: resetforgotPasswordInput): String!
+  softDeleteUser(userId: ID!): String!
+  restoreUser(userId: ID!): String!
+}

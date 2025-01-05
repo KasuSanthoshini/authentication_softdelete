@@ -1,0 +1,24 @@
+"""
+JavaScript Date instances and timestamps (represented as 32-bit signed integers) are coerced to RFC 3339 compliant date-time strings. Invalid Date instances raise a field error.
+"""
+scalar DateTime
+
+"""
+The JSON scalar type represents JSON values as specified by {@link http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf ECMA-404}.
+"""
+scalar JSON
+
+"""
+A field whose value conforms to the standard internet email address format as specified in {@link https://html.spec.whatwg.org/multipage/input.html#valid-e-mail-address HTML Spec}.
+"""
+scalar EmailAddress
+
+"""
+A field whose value conforms to the standard URL format as specified in {@link https://www.ietf.org/rfc/rfc3986.txt RFC3986}, and it uses real JavaScript URL objects.
+"""
+scalar URL
+
+"""
+A field whose value is a valid password. It must be at least 8 characters long and contain at least one number and one letter and one special character
+"""
+scalar Password

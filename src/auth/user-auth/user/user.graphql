@@ -1,0 +1,27 @@
+scalar Date
+type User
+  @shareable
+  @key(fields: "_id")
+  @key(fields: "_id userName")
+  @entity(
+    additionalFields: [
+      { path: "createdAt", type: "Date" }
+      { path: "updatedAt?", type: "Maybe<Date>" }
+      { path: "password", type: "string" }
+      { path: "deleted", type: "Boolean" }
+    ]
+  ) {
+  _id: ID! @id
+  displayName: String! @column
+  email: String! @column
+  mobileNumber: String! @column
+  userName: String! @column
+  aadharNumber: String! @column
+  createdAt: Date! @column
+  deleted: Boolean! @column
+}
+
+extend type Query {
+  findUserById(userId: String!): User!
+  getUserDetailsByToken(authToken: String!): User!
+}
